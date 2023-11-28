@@ -1,25 +1,92 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+body {
+  background: url(../img/cat_bg.jpeg) center / cover no-repeat;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #f8f2f2;
+}
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.wrap-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  height: 2em;
+  border-radius: 0.4em;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.breed-select {
+  width: 400px;
+  overflow: hidden;
+}
+
+.breed-select:hover {
+  background-color: rgba(20, 101, 55, 0.8);
+  color: white;
+}
+
+.cat-img {
+  max-width: 350px;
+}
+
+.cat-info {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  width: 800px;
+  background-color: rgba(17, 73, 41, 0.9);
+}
+
+.breed-info {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.cat-name {
+  margin-bottom: 10px;
+}
+
+.description {
   font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+.temperament {
+  font-size: 1em;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px dotted #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
